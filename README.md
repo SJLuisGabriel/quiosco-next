@@ -26,6 +26,7 @@ Este proyecto es un sistema de kiosco de alimentos que permite a los clientes re
   - Conexión con la base de datos PostgreSQL alojada en Render.
   - Creación de los modelos de la base de datos.
   - Instalación de la dependencia `ts-node` con el comando **`npm i -D ts-node`**.
+    **`npm i @prisma/client` `npm i -D prisma`**
   - Creación de archivos para la inserción de datos proporcionados en el curso.
   - Carga de información en la base de datos de Render con el comando **`npx prisma db seed`**.
 
