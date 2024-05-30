@@ -1,36 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Quiosco de Alimentos
 
-## Getting Started
+## Descripción del Proyecto
 
-First, run the development server:
+Este proyecto es un sistema de kiosco de alimentos que permite a los clientes realizar pedidos, a la cocina recibir y procesar esos pedidos, y a la ventanilla administrar las órdenes listas para su entrega. El proyecto utiliza Next.js, un framework de React, y Prisma como ORM para la gestión de la base de datos.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Funcionalidades
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Ver categorías de alimentos.
+- Ver productos dentro de cada categoría.
+- Agregar productos al carrito.
+- Modificar cantidad de productos en el carrito.
+- Realizar pedido.
+- Recibir pedidos en la cocina.
+- Marcar pedidos como completados.
+- Ver órdenes listas en la ventanilla.
+- Marcar órdenes como entregadas.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Historial de Cambios
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### Versión 1.0.0 - 20 de Mayo, 2024
 
-## Learn More
+- **Creación del Proyecto**
 
-To learn more about Next.js, take a look at the following resources:
+  - Configuración inicial del proyecto con las rutas principales.
+  - Conexión con la base de datos PostgreSQL alojada en Render.
+  - Creación de los modelos de la base de datos.
+  - Instalación de la dependencia `ts-node` con el comando **`npm i -D ts-node`**.
+  - Creación de archivos para la inserción de datos proporcionados en el curso.
+  - Carga de información en la base de datos de Render con el comando **`npx prisma db seed`**.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Feature: Ver categorías de alimentos**
+  - Consumo de la información en el proyecto.
+  - Implementación de la funcionalidad que permite a los clientes ver las diferentes categorías de alimentos disponibles en el quiosco.
+  - Implementación de una vista con íconos para una mejor visualización por parte de los clientes.
+  - Desarrollo de las rutas necesarias para que los usuarios puedan navegar entre las diferentes categorías utilizando el menú de navegación.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Versión 1.1.0 - 21 de Mayo, 2024
 
-## Deploy on Vercel
+- **Feature: Ver productos dentro de cada categoría**
+  - Implementación de la funcionalidad que permite a los clientes ver los productos disponibles dentro de una categoría seleccionada.
+  - Diseño y formato del precio y estilo para los productos (incluyendo nombre y precio).
+  - Adición y renderización de imágenes para mejorar la visualización por parte de los usuarios.
+  - Incorporación de un botón de "Agregar al carrito" con estilo, sin funcionalidad activa.
+  - Adición de un título que invita al usuario a seleccionar su pedido.
+  - Aplicación de estilo al menú de navegación (Nav) para indicar la categoría que se está visualizando.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Instalación
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+1. Clona este repositorio.
+2. Instala las dependencias con `npm install`.
+3. Configura la base de datos en el archivo `.env`.
+4. Ejecuta la aplicación con `npm run dev`.
