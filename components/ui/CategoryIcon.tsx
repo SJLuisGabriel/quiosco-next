@@ -17,7 +17,7 @@ export default function CategoryIcon({ category }: CategoryIconProps) {
         category.slug == params.category ? "bg-amber-400" : ""
       } flex items-center gap-4 w-full border-t border-gray-200 p-3 last-of-type:border-b`}
     >
-      <div className="w-16 h-16 relative">
+      <div className="w-10 h-10 lg:w-14 lg:h-14 relative">
         <Image fill src={`/icon_${category.slug}.svg`} alt={""} />
       </div>
       <Link className="text-xl font-bold" href={`/order/${category.slug}`}>

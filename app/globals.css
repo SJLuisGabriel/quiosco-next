@@ -27,4 +27,25 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+
+  .custom-scrollbar::-webkit-scrollbar {
+    width: 12px;
+    /* Ancho de la scrollbar */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: #ffffff00;
+    /* Color del track */
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #5b5a5a;
+    /* Color del thumb */
+    border-radius: 6px;
+  }
+
+  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #292929;
+    /* Color del thumb al pasar el mouse */
+  }
 }

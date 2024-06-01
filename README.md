@@ -18,7 +18,7 @@ Este proyecto es un sistema de kiosco de alimentos que permite a los clientes re
 
 ## Historial de Cambios
 
-### Versión 1.0.0 - 20 de Mayo, 2024
+### Versión 1.0.0 - 21 de Mayo, 2024
 
 - **Creación del Proyecto**
 
@@ -48,38 +48,41 @@ Este proyecto es un sistema de kiosco de alimentos que permite a los clientes re
 
 ### Versión 1.2.0 - 22 de Mayo, 2024
 
-- **Feature**: Agregar productos al carrito
-  - Implementada la funcionalidad que permite a los clientes agregar productos seleccionados al carrito de compras.
+- **Feature: Agregar productos al carrito**
+  - Instalación de la herramienta `zustand` para la gestión del estado con el comando **`npm i zustand`**.
+  - Modificación del apartado del carrito para manejar adecuadamente cuando este se encuentra vacío.
+  - Instalación de la librería de íconos `@heroicons/react` con el comando **`npm i @heroicons/react`**.
+  - Implementación de la funcionalidad que permite a los clientes agregar productos seleccionados al carrito de compras.
+  - Mejora de la visualización del carrito para que los usuarios comprendan mejor su contenido.
 
 ### Versión 1.3.0 - 23 de Mayo, 2024
 
-- **Feature**: Modificar cantidad de productos en el carrito
-  - Implementada la funcionalidad que permite a los clientes modificar la cantidad de cada producto en el carrito.
+- **Feature: Modificar cantidad de productos en el carrito**
+  - Implementada la funcionalidad que evita la duplicación de productos en el carrito.
+  - Implementada la capacidad para que los clientes puedan modificar la cantidad de cada producto en el carrito, con un rango de 1 a 5 unidades por producto.
+  - Añadida la funcionalidad para que los clientes puedan eliminar productos del carrito.
+  - Mejora visual y funcional para mostrar el total de productos en el carrito, proporcionando una mejor experiencia de usuario.
 
 ### Versión 1.4.0 - 24 de Mayo, 2024
 
-- **Feature**: Realizar pedido
-  - Implementada la funcionalidad que permite a los clientes finalizar el pedido y enviarlo a la cocina.
+- **Feature: Realizar pedido**
+  - Creación de dos módulos para guardar pedidos en la base de datos (`order` y `product`), seguida de la migración a la base de datos con **`npx prisma migrate dev`**.
+  - Implementación de un botón para confirmar el pedido desde la sección "Mis pedidos".
+  - Adición de un campo para el nombre del cliente que realiza el pedido.
+  - Instalación de la librería de validación **`npm i zod`**.
+  - Implementación de validaciones para el nombre del cliente utilizando `zod`.
+  - Instalación de la librería **`npm i react-toastify`** para notificaciones.
+  - Adición de mensajes de error indicando la necesidad de ingresar el nombre del cliente para proceder con el pedido.
+  - Implementación de la funcionalidad que permite a los clientes finalizar el pedido y enviarlo a la cocina.
+  - Adición de mensajes de verificación para notificar a los usuarios que el pedido se ha realizado correctamente.
+  - Implementación de la limpieza de la pantalla de pedido una vez que el pedido se ha realizado exitosamente.
 
 ### Versión 1.5.0 - 27 de Mayo, 2024
 
 - **Feature**: Recibir pedidos
+  - se crearon las carpetas correspondientes para el admin
+  - se añadio el logo del quisco como un componente
   - Implementada la funcionalidad que permite a la cocina recibir notificaciones de nuevos pedidos realizados por los clientes.
-
-### Versión 1.6.0 - 28 de Mayo, 2024
-
-- **Feature**: Marcar pedidos como completados
-  - Implementada la funcionalidad que permite a la cocina marcar los pedidos como completados una vez que estén listos.
-
-### Versión 1.7.0 - 29 de Mayo, 2024
-
-- **Feature**: Ver órdenes listas
-  - Implementada la funcionalidad que permite a la ventanilla ver las órdenes que están listas para ser recogidas.
-
-### Versión 1.8.0 - 30 de Mayo, 2024
-
-- **Feature**: Marcar órdenes como entregadas
-  - Implementada la funcionalidad que permite a la ventanilla marcar las órdenes como entregadas a los clientes.
 
 ## Instalación
 
