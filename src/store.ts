@@ -1,7 +1,7 @@
 import { create } from "zustand";
 import { OrderItem } from "./types";
 import { Product } from "@prisma/client";
-import { set } from "mongoose";
+// import { set } from "mongoose";
 
 interface Store {
   order: OrderItem[];
