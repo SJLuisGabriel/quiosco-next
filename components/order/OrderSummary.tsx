@@ -23,7 +23,6 @@ export default function OrderSummary() {
     };
 
     const result = OrderSchema.safeParse(data);
-    console.log(result);
 
     if (!result.success) {
       result.error.issues.forEach((issue) => {

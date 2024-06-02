@@ -79,10 +79,22 @@ Este proyecto es un sistema de kiosco de alimentos que permite a los clientes re
 
 ### Versión 1.5.0 - 27 de Mayo, 2024
 
-- **Feature**: Recibir pedidos
-  - se crearon las carpetas correspondientes para el admin
-  - se añadio el logo del quisco como un componente
-  - Implementada la funcionalidad que permite a la cocina recibir notificaciones de nuevos pedidos realizados por los clientes.
+- **Feature: Recibir pedidos**
+  - Creación de las carpetas correspondientes para el módulo de administración.
+  - Adición del logo del quiosco como un componente reutilizable.
+  - Creación de rutas y vistas para el administrador, incluyendo secciones de órdenes y productos.
+  - Implementación del menú de navegación para el administrador.
+  - Desarrollo de la interfaz visual para la recepción de nuevas órdenes.
+  - Implementación de la funcionalidad que permite a la cocina recibir notificaciones de nuevos pedidos realizados por los clientes. (Novedad)
+
+### Versión 1.6.0 - 28 de Mayo, 2024
+
+- **Feature**: Marcar pedidos como completados
+  - Implementada la funcionalidad que permite a la cocina marcar los pedidos como completados una vez que estén listos.
+  - se realizo un re-fetching en las ordenes para cuando se completen ya no aparezcan
+  - en el administador en Productos podemos ver todos los productos que hay en la base de datos
+  - Implemeantada un paginador de los productos
+  - se añadio un buscador para los productos
 
 ## Instalación
 
@@ -90,3 +102,4 @@ Este proyecto es un sistema de kiosco de alimentos que permite a los clientes re
 2. Instala las dependencias con `npm install`.
 3. Configura la base de datos en el archivo `.env`.
 4. Ejecuta la aplicación con `npm run dev`.
+5. Ejecuta la prisma con `npx prisma studio`.
