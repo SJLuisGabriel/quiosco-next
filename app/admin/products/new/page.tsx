@@ -1,5 +1,15 @@
+import AddProductForm from "@/components/products/AddProductForm";
+import ProductForm from "@/components/products/ProductForms";
+import Heading from "@/components/ui/Heading";
 import React from "react";
 
 export default function CreateProductPage() {
-  return <div>CreateProductPage</div>;
+  return (
+    <>
+      <Heading>Nuevo Producto</Heading>
+      <AddProductForm>
+        <ProductForm />
+      </AddProductForm>
+    </>
+  );
 }

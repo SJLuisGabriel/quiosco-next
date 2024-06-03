@@ -87,14 +87,27 @@ Este proyecto es un sistema de kiosco de alimentos que permite a los clientes re
   - Desarrollo de la interfaz visual para la recepción de nuevas órdenes.
   - Implementación de la funcionalidad que permite a la cocina recibir notificaciones de nuevos pedidos realizados por los clientes. (Novedad)
 
-### Versión 1.6.0 - 28 de Mayo, 2024
+### Versión 1.6.0 - 29 de Mayo, 2024
 
-- **Feature**: Marcar pedidos como completados
+- **Feature: Marcar pedidos como completados y Funcionalidad de Añadir y Editar Productos**
   - Implementada la funcionalidad que permite a la cocina marcar los pedidos como completados una vez que estén listos.
-  - se realizo un re-fetching en las ordenes para cuando se completen ya no aparezcan
-  - en el administador en Productos podemos ver todos los productos que hay en la base de datos
-  - Implemeantada un paginador de los productos
-  - se añadio un buscador para los productos
+  - Implementación de re-fetching en las órdenes para que las completadas ya no aparezcan en la lista.
+  - En la sección de administración, en Productos, se pueden ver todos los productos de la base de datos.
+  - Implementación de un paginador para la lista de productos.
+  - Adición de un buscador para los productos.
+  - Creación de un formulario en una nueva ventana para agregar más productos.
+  - Instalación de `cloudinary` para gestionar imágenes al añadir un producto con **`npm i cloudinary`**.
+  - Instalación de `react-icons` para íconos adicionales con **`npm i react-icons`**.
+  - Adición de funcionalidad en el formulario para previsualizar la imagen que se va a subir.
+  - Implementación de la funcionalidad para registrar productos nuevos con su imagen.
+  - Implementación de la función para actualizar órdenes cuando el cliente las envía, con actualización en tiempo real y manual en la sección de administración.
+  - Instalación de `swr` para manejo de datos en tiempo real con **`npm i swr`**.
+
+### Versión 1.7.0 - 02 de Junio, 2024
+
+- **Feature: Ver órdenes listas**
+  - Implementada la funcionalidad que permite a la ventanilla ver las órdenes que están listas para ser recogidas.
+  - Configuración para que solo aparezcan las últimas 5 órdenes listas.
 
 ## Instalación
 
