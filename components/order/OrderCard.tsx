@@ -1,3 +1,5 @@
+import { useState } from "react";
+import { toast } from "react-toastify";
 import { completeOrder } from "@/actions/complete-order-action";
 import { OrderWithProducts } from "@/src/types";
 import { formatCurrency } from "@/src/utils";
@@ -6,6 +8,24 @@ type OrdeCardProps = {
   order: OrderWithProducts;
 };
 export default function OrderCard({ order }: OrdeCardProps) {
+  const [isCompleting, setIsCompleting] = useState(false);
+
+  const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    setIsCompleting(true);
+
+    const formData = new FormData(event.currentTarget);
+    const response = await completeOrder(formData);
+
+    setIsCompleting(false);
+
+    if (response.success) {
+      toast.success(response.message);
+    } else {
+      toast.error(response.message);
+    }
+  };
+
   return (
     <section
       aria-labelledby="summary-heading"
@@ -41,13 +61,15 @@ export default function OrderCard({ order }: OrdeCardProps) {
         </div>
       </dl>
 
-      <form action={completeOrder}>
+      <form onSubmit={handleSubmit}>
         <input type="hidden" value={order.id} name="order_id" />
-        <input
+        <button
           type="submit"
           className="bg-indigo-600 hover:bg-indigo-800 text-white w-full mt-5 p-3 uppercase font-bold cursor-pointer"
-          value="Marcar Orden Completada"
-        />
+          disabled={isCompleting}
+        >
+          {isCompleting ? "Completando..." : "Marcar Orden Completada"}
+        </button>
       </form>
     </section>
   );

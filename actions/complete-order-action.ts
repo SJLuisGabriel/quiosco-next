@@ -1,9 +1,7 @@
 "use server";
-
 import { prisma } from "@/src/lib/prisma";
 import { OrderIdSchema } from "@/src/schema";
 import { revalidatePath } from "next/cache";
-
 export async function completeOrder(formData: FormData) {
   const data = {
     orderId: formData.get("order_id"),
@@ -23,10 +21,12 @@ export async function completeOrder(formData: FormData) {
         },
       });
       revalidatePath("/admin/orders");
+      return { success: true, message: "Pedido Completado Correctamente" };
     } catch (error) {
       console.log(error);
+      return { success: false, message: "Error al completar el pedido" };
     }
+  } else {
+    return { success: false, message: "Datos inválidos" };
   }
-
-  console.log("desde complete order");
 }

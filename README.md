@@ -85,7 +85,6 @@ Este proyecto es un sistema de kiosco de alimentos que permite a los clientes re
   - Creación de rutas y vistas para el administrador, incluyendo secciones de órdenes y productos.
   - Implementación del menú de navegación para el administrador.
   - Desarrollo de la interfaz visual para la recepción de nuevas órdenes.
-  - Implementación de la funcionalidad que permite a la cocina recibir notificaciones de nuevos pedidos realizados por los clientes. (Novedad)
 
 ### Versión 1.6.0 - 29 de Mayo, 2024
 
@@ -109,7 +108,13 @@ Este proyecto es un sistema de kiosco de alimentos que permite a los clientes re
   - Implementada la funcionalidad que permite a la ventanilla ver las órdenes que están listas para ser recogidas.
   - Configuración para que solo aparezcan las últimas 5 órdenes listas.
 
-## Instalación
+### Versión 1.8.0 - 30 de Mayo, 2024
+
+- **Feature: Mejoras en la Experiencia de Usuario**
+  - Implementación de un mensaje de carga al ingresar al panel de administración para una experiencia más fluida y amigable.
+  - Ahora, al completar una orden en el panel de administración, se muestra un mensaje de "Procesando", brindando una retroalimentación visual clara al usuario.
+
+### Instalación
 
 1. Clona este repositorio.
 2. Instala las dependencias con `npm install`.

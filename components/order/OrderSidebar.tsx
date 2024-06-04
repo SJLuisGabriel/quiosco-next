@@ -10,11 +10,10 @@ export default async function OrderSidebar() {
   const categories = await getCategories();
 
   return (
-    <aside className="md:w-72 md:h-screen bg-white ">
+    <aside className="md:w-72 md:h-screen bg-white overflow-y-auto custom-scrollbar">
       <Logo />
-      <nav className="mt-3">
+      <nav className="mt-3 ">
         {categories.map((category) => (
-          // eslint-disable-next-line react/jsx-key
           <CategoryIcon key={category.id} category={category} />
         ))}
       </nav>
